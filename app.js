@@ -34,7 +34,7 @@ app.get('/', async (req,res)=>{
 
 app.use('/user',userRoute);
 app.use('/blog',blogRoute);
-
+// console.log(process.env.MONGO_URL);
 mongoose.connect(process.env.MONGO_URL)
 .then((e)=>console.log("Mongodb Connected"));
 
